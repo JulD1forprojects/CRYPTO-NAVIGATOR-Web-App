@@ -1,0 +1,1 @@
+# CRYPTO NAVIGATOR Web App
