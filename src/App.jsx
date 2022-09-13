@@ -17,16 +17,16 @@ const App = () => {
   const [currency, setCurrency] = useState("USD"); // USD set as default currency
   const [currentPage, setCurrentPage] = useState(1); // as we make pagination component so we make default page to page 1
   const [howManyPages, setHowmanypages] = useState(1); // by default we make no of page as 1, but it will get calculated again when we get data from api
-  const [postsPerPage] = useState(100); // by default we set 10 records per page to show in table
-  //const [currentButton, setCurrentButton] = useState(1); // we set the pagination button to be set page 1 by default
+  const [postsPerPage] = useState(100); // by default we set 100 records per page to show in table
+  const [currentButton, setCurrentButton] = useState(1); // we set the pagination button to be set page 1 by default
 
   // the below function is to get data from the api
   const getData = () => {
     // as below we see that i have set the currency as variable because it will get change by currency changer and by default we set it as USD above
     axios
       .get(
-        //API is not right
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+        //!setting currency variable as it will get change by currency changer
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}`
       )
       .then((res) => {
         // if we get the data we will receive it
