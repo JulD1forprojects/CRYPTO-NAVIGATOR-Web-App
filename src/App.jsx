@@ -25,7 +25,7 @@ const App = () => {
     // as below we see that i have set the currency as variable because it will get change by currency changer and by default we set it as USD above
     axios
       .get(
-        //!setting currency variable as it will get change by currency changer
+        //!setting currency variable as it will get changed by currency changer
         `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}`
       )
       .then((res) => {
@@ -61,14 +61,17 @@ const App = () => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   console.log(indexOfFirstPost);
 
-  // the below code is for getting the data based on the indexes and the amount of record we set to show per page. i.e 10
+  // the below code is for getting the data based on the indexes
+  //and the amount of record we set to show per page. i.e 100
   const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
   console.log(currentPosts);
 
-  // the below function will be called when this page will get data from the banner component, we will pass this function as a prop in banner component
+  // will be called when this page will get data from the banner component,
+  //we will pass this function as a prop in banner component
   const setSearchData = (newdata) => {
     console.log(newdata);
-    // when we get data searched data in banner component we will put it inside out main data state so it can be shown in table
+    // when we get searched data in a banner component
+    //we will put it inside out main data state so it can be shown in table
     setData(newdata);
 
     // after we get data we will calculate the no of pages for the table
@@ -81,7 +84,7 @@ const App = () => {
     setCurrentButton(1);
   };
 
-  // rendering the ui
+  //! RENDERING THE UI
 
   // shows while loading state is True, else it will show API data
   if (loading) {
