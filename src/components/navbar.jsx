@@ -9,13 +9,18 @@ import currencies from "../data/currencies";
 
 const NavbarMenu = ({ theme, changeThemes, currency, setCurrency }) => {
   return (
-    <Navbar>
+    //defining a theme mode to make brand name visible
+    <Navbar variant={theme ? "dark" : "light"}>
       <Container>
         <Navbar.Brand href="/">
           <h3>Crypto Navigator</h3>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
+          {/* */}
+
+          {/* NAVBAR is able to subscribe to the data through Consumer made available from Provider in ThemeWrapper
+          Toggle button is being called and assigned the function so if its light and user change theme mode */}
           <ThemeContext.Consumer>
             {({ changeTheme }) => (
               <ToggleDark
@@ -28,6 +33,7 @@ const NavbarMenu = ({ theme, changeThemes, currency, setCurrency }) => {
             )}
           </ThemeContext.Consumer>
 
+          {/* rendering the select dropdown for currency changer*/}
           <select
             id="currency"
             name="currency"
