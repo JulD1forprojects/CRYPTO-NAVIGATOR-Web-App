@@ -41,6 +41,7 @@ const NavbarMenu = ({ theme, changeThemes, currency, setCurrency }) => {
             onChange={(e) => setCurrency(e.target.value)}
           >
             <option>select currency</option>
+            {/* mapping the currencies */}
             {currencies.map((v, i) => {
               return (
                 <option key={i} value={v.value}>
