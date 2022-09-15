@@ -35,7 +35,6 @@ h1 {
 }
 
 /*! HTML/CSS SWITCH */
-
 .switch {
   display: inline-block;
   position: relative;
@@ -66,14 +65,18 @@ switch:active::before {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
 }
 
+/* theme toggle switch*/
 .toggleinput:checked + .switch {
   background: #72da67;
 }
 
-/* theme toggle switch*/
 .toggleinput:checked + .switch::before {
   left: 27px;
   background: #fff;
+}
+
+.toggleinput:checked + .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
 }
 
 .row {
@@ -109,6 +112,18 @@ switch:active::before {
 @media screen and (max-width: 980px) {
   .column1 {
     width: 100% !important;
+  }
+  .column2 img {
+    width: 350px;
+  }
+  .column1 h1 {
+    font-size: 40px;
+  }
+  .column1 p {
+    font-size: 17px;
+  }
+  .row {
+    margin-top: 80px;
   }
 }
 
