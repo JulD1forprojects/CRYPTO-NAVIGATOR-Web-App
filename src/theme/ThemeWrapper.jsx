@@ -30,7 +30,9 @@ const ThemeContextWrapper = (props) => {
 
   return (
     <>
-      {/* returing the context in this context we pass the theme and change theme funtion we define in this page */}
+      {/* returing the context: pass the theme, 
+       change theme funtion we defined in this page,
+       declaring the data available to the subscribed component*/}
       <ThemeContext.Provider value={{ theme: theme, changeTheme: changeTheme }}>
         {props.children}
       </ThemeContext.Provider>
