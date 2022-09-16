@@ -7,7 +7,8 @@ const ToggleDark = ({ theme, toggleDark }) => {
       <div className="wrapper">
         <div>
           {/* render the toggle: 
-          assigning the default value that comes from the props and the function which will get called when the user switches the toggle   */}
+          assigning the default value that comes from the props and the 
+          function which will get called when the user switches the toggle   */}
           <input
             type="checkbox"
             hidden="hidden"
