@@ -16,13 +16,13 @@ const Banner = ({
 
   // gets called when search button is pressed
   const search = () => {
-    console.log(currency);
+    //console.log(currency);
     axios
       .get(
         `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}`
       )
       .then((res) => {
-        console.log("error");
+        //console.log("error");
         // if we get data it will be received
         console.log(res);
 
