@@ -18,7 +18,6 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1); // as we make pagination component so we make default page to page 1
   const [howManyPages, setHowmanypages] = useState(1); // by default we make no of page as 1, but it will get calculated again when we get data from api
   const [postsPerPage] = useState(100); // by default we set 100 records per page to show in table
-  const [currentButton, setCurrentButton] = useState(1); // we set the pagination button to be set page 1 by default
 
   // the below function is to get data from the api
   const getData = () => {
@@ -79,9 +78,6 @@ const App = () => {
 
     // we set the table page to page 1 because before the search the user can be on any page and search result might be only on only 1 page
     setCurrentPage(1);
-
-    //set pagination button to button 1 because before the search the user can be on any page and search result might be only on only 1 page
-    setCurrentButton(1);
   };
 
   //! RENDERING THE UI
@@ -109,7 +105,12 @@ const App = () => {
           <br />
 
           {/* rendering the banner component */}
-          <Banner />
+          <Banner
+            currency={currency}
+            setSearchData={setSearchData}
+            getData={getData}
+            setCurrentPage={setCurrentPage}
+          />
 
           {/* rendering the table to show the data */}
           <Table
