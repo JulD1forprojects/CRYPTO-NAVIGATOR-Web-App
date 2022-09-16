@@ -1,4 +1,4 @@
-import React from "react";
+//navbar component
 
 // importing dependencies
 import Container from "react-bootstrap/Container";
@@ -17,8 +17,6 @@ const NavbarMenu = ({ theme, changeThemes, currency, setCurrency }) => {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          {/* */}
-
           {/* NAVBAR is able to subscribe to the data through Consumer made available from Provider in ThemeWrapper
           Toggle button is being called and assigned the function so if its light and user change theme mode */}
           <ThemeContext.Consumer>
