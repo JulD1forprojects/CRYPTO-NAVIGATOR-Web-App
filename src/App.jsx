@@ -9,6 +9,7 @@ import { Table } from "react-bootstrap"; //table component from React-bootstrap 
 import Coins from "./components/coin"; //the table body in which our api data will get shown
 import NavbarMenu from "./components/navbar"; // holds the dark and light mode and  currency changer
 import Banner from "./components/banner"; // calling the banner component, it holds the search bar
+import Pagination from "./components/pagination"; // calling Pagination component to paginate the crypto table
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true); // by default the dark theme is set
@@ -16,9 +17,9 @@ const App = () => {
   const [data, setData] = useState([]); // by default the data state is empty, it will get filled when we get data from api
   const [currency, setCurrency] = useState("USD"); // USD set as default currency
   const [currentPage, setCurrentPage] = useState(1); // as we make pagination component so we make default page to page 1
-  const [howManyPages, setHowmanypages] = useState(1); // by default we make no of page as 1, but it will get calculated again when we get data from api
-  const [postsPerPage] = useState(100); // by default we set 100 records per page to show in table
-
+  const [postsPerPage] = useState(10); // by default we set 10 raws of cryptocurrencies to be show in table per page
+  const [currentButton, setCurrentButton] = useState(1); //setting pagination button on the first pasge by default
+  const [howManyPages, setHowmanypages] = useState(1); //by default No of Pages is 1, but it will get reculculated when we get data from API
   // the below function is to get data from the api
   const getData = () => {
     // as below we see that i have set the currency as variable because it will get change by currency changer and by default we set it as USD above
@@ -46,7 +47,7 @@ const App = () => {
       });
   };
 
-  // the below code will run before the page first render and when the currency will get change
+  // the below code will run before the page first render and when the currency will get changed
   useEffect(() => {
     // we call the function we defined above to get the data
     getData();
@@ -69,19 +70,22 @@ const App = () => {
   //we will pass this function as a prop in banner component
   const setSearchData = (newdata) => {
     console.log(newdata);
+
     // when we get searched data in a banner component
     //we will put it inside out main data state so it can be shown in table
     setData(newdata);
 
-    // after we get data we will calculate the no of pages for the table
-    //setHowmanypages(Math.ceil(newdata.length / postsPerPage));
+    //after API fetches data the No of pages for the table will get recalculated
+    setHowmanypages(Math.ceil(newdata.length / postsPerPage));
 
-    // we set the table page to page 1 because before the search the user can be on any page and search result might be only on only 1 page
+    // we set the table page to page 1 because before the search the user can be on any page
+    // but the search result need be only on only the first page
     setCurrentPage(1);
+
+    setCurrentButton(1);
   };
 
   //! RENDERING THE UI
-
   // shows while loading state is True, else it will show API data
   if (loading) {
     return (
@@ -92,7 +96,7 @@ const App = () => {
   } else {
     return (
       <div className="App">
-        {/* rendering the navbar component 
+        {/* rendering the NAVBAR component 
        passing theme function to change theme and currency */}
         <NavbarMenu
           theme={darkMode}
@@ -104,15 +108,16 @@ const App = () => {
         <div className="container">
           <br />
 
-          {/* rendering the banner component */}
+          {/* rendering the BANNER component */}
           <Banner
             currency={currency}
             setSearchData={setSearchData}
             getData={getData}
             setCurrentPage={setCurrentPage}
+            setCurrentButton={setCurrentButton}
           />
 
-          {/* rendering the table to show the data */}
+          {/* rendering the TABLE to show the data */}
           <Table
             striped
             bordered
@@ -133,10 +138,22 @@ const App = () => {
               </tr>
             </thead>
 
-            {/* rendering the coins component which holds table body */}
-            <Coins coins={data} />
+            {/* rendering the COINS component which holds table body */}
+            <Coins coins={currentPosts} />
           </Table>
           <br />
+
+          {/* RENDERING THE PAGINATION COMPONENT*/}
+          {/* Here we pass the pages that must be shown:
+        the function to set the current page is based on user's click */}
+          <Pagination
+            pages={howManyPages}
+            setCurrentPage={setCurrentPage}
+            theme={darkMode}
+            currentPage={currentPage}
+            currentButton={currentButton}
+            setCurrentButton={setCurrentButton}
+          />
           <br />
         </div>
       </div>
