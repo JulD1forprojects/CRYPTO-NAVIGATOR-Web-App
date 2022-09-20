@@ -20,11 +20,11 @@ const Coins = ({ coins }) => {
               </td>
               <td>{v.name}</td>
               <td>{v.symbol}</td>
-              <td>{v.current_price}</td>
-              <td>{v.price_change_24h}</td>
-              <td>{v.market_cap}</td>
-              <td>{v.total_volume}</td>
-              <td>{v.circulating_supply}</td>
+              <td>{v.current_price.toLocaleString()}</td>
+              <td>{v.price_change_24h.toFixed(4)}</td>
+              <td>{v.market_cap.toLocaleString()}</td>
+              <td>{v.total_volume.toLocaleString()}</td>
+              <td>{v.circulating_supply.toLocaleString()}</td>
             </tr>
           );
         })}
