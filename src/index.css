@@ -34,6 +34,65 @@ h1 {
   line-height: 1.1;
 }
 
+/*! PAGINATION */
+/*! Main pagination css */
+.pagination-container,
+.pagination-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-container {
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+}
+.pagination-container a {
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pagination-container,
+.pagination-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*! Opacity for PREV & NEXT buttons when user press page 1 or 10*/
+.pagination-container a.disabled {
+  opacity: 0.2;
+}
+
+/*! Page button highlight */
+.pagination-container a.active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #7cbddb;
+}
+
+.white-content {
+  background-color: white;
+  color: #000;
+}
+
+.dark-body {
+  background-color: #0d1117;
+  color: white;
+}
+
+#pagination-dark > a {
+  color: white;
+}
+
+#pagination-light > a {
+  color: black;
+}
+
 /*! HTML/CSS SWITCH */
 .switch {
   display: inline-block;
@@ -145,7 +204,7 @@ select {
   padding: 0.1rem;
 }
 
-/* SEARCH BAR */
+/*! SEARCH BAR */
 #form.example input[type="text"] {
   padding: 10px;
   font-size: 17px;
@@ -160,7 +219,7 @@ select {
   clear: both;
   display: table;
 }
-/* SEARCH BUTTON */
+/*! SEARCH BUTTON */
 #form.example button {
   float: left;
   width: 20%;
