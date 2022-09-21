@@ -24,6 +24,7 @@
   color: #000;
 }
 
+/*! Dark-body Theme */
 .dark-body {
   background-color: #0d1117;
   color: white;
@@ -124,7 +125,7 @@ switch:active::before {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
 }
 
-/* theme toggle switch*/
+/* theme toggle switch color*/
 .toggleinput:checked + .switch {
   background: #72da67;
 }
@@ -167,7 +168,7 @@ switch:active::before {
   margin-bottom: 20px;
 }
 
-/*Header content responsive*/
+/*! CONTENT RESPONSIVE*/
 @media screen and (max-width: 980px) {
   .column1 {
     width: 100% !important;
