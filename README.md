@@ -2,7 +2,7 @@
 
 ## 📊 About this Web App
 
-Crypto Navigator is a practical Web App that was developed with the purpose to help crypto enthusiasts find best Cypto rates around the globe and are rupidly fetched with one of the most reliable Crypto APIs on the market - Coin Gecko /coins/markets. The app fetches data for 100 crypto coins based on selected fiat currency.
+Crypto Navigator is a practical Web App that was developed with the purpose to help crypto enthusiasts find the best Cypto rates around the globe and are rapidly fetched with one of the most reliable Crypto APIs on the market - Coin Gecko /coins/markets. The app fetches data for 100 crypto coins based on any selected fiat currency.
 
 ## 🧐 How to use this Web App
 
@@ -12,7 +12,7 @@ User is able to:
 - Search various crypto currencies using the search bar
 - Crear the search history
 - Use pages to look for and view different currencies
-- Change a theme with a toggle switch
+- Change themes with a toggle switch
 
 ## 🧩 App Wireframing
 
@@ -21,21 +21,21 @@ User is able to:
 ## 👨🏽‍💻 Project Development Methodology
 
 <ol>
-<li>Decide on visuals and types of components need to be developed. </li>
-<li>Design banner with a simple text & image. </li>
-<li>Wrap the whole app into a theme (with Theme Context and Theme Wrapper). </li>
-<li>Wrap the app in the Theme Wrapper in main.jsx. </li>
-<li>Start working on a navbar. Navbar is meant to contain Toggle (ToggleDark component) to switch between light and dark theme. </li>
-<li>Main functionality work: work on Table & Coins component with fetching and rendering API data (with Axios).</li>
-<li>Develop Search field and Clear search functionality to ensure user can pull and focus on individual crypto coin(s) only. </li>
+<li>Decided on visuals and types of components that needed to be developed. </li>
+<li>Designed banner with a simple text & image. </li>
+<li>Wrapped the whole app into a theme (with Theme Context and Theme Wrapper). </li>
+<li>Wraped the app in the Theme Wrapper in main.jsx. </li>
+<li>Started working on a navbar. Navbar is meant to contain Toggle (ToggleDark component) to switch between light and dark theme. </li>
+<li>Main functionality work: worked on Table & Coins component to fetch and render API data (with Axios).</li>
+<li>Developed Search field and Clear search functionality to ensure user could focus on individual crypto coin(s) only. </li>
 <li>Pagination component was the last part of development process, after the rest of functionality was ensured to be in place. Pagination is meant to limit number of crypto data rows in a table (from 100 to 10 per page) to complement search functionality and make user experience more friendly.</li>
-<li>UI and UX was achieved via Bootstrap and React Bootstrap dependencies and CSS selectors</li>
-<li>Web App Responsiveness (different screen fit) comes from CSS @media queries</li>
+<li>UI and UX was achieved via Bootstrap and React Bootstrap dependencies and CSS selectors.</li>
+<li>Web App Responsiveness (different screen fit) comes from CSS @media queries.</li>
 </ol>
 
 ## 💻 Dependecies (libraries)
 
-Crypto Navigator Web App was built using React framework with ulilasatiion of floowing dependecies (libraries):
+Crypto Navigator Web App was built using React framework with ulilisatiion of folowing dependecies (libraries):
 
 - [Bootstrap](https://www.npmjs.com/package/bootstrap)
 
