@@ -2,7 +2,7 @@
 
 ## 📊 About this Web App
 
-Crypto Navigator is a practical Web App that was developed with the purpose to help crypto enthusiasts find the best Cypto rates around the globe and are rapidly fetched with one of the most reliable Crypto APIs on the market - Coin Gecko /coins/markets. The app fetches data for 100 crypto coins based on any selected fiat currency.
+Crypto Navigator is a practical Web App that was developed with the purpose to help crypto enthusiasts find the best Crypto rates around the globe and are rapidly fetched with one of the most reliable Crypto APIs on the market - Coin Gecko /coins/markets. The app fetches data for 100 crypto coins based on any selected fiat currency.
 
 ## 🧐 How to use this Web App
 
@@ -10,7 +10,7 @@ User is able to:
 
 - View the crypto data based on selected fiat currency
 - Search various crypto currencies using the search bar
-- Crear the search history
+- Clear the search history
 - Use pages to look for and view different currencies
 - Change themes with a toggle switch
 
@@ -24,8 +24,8 @@ User is able to:
 <li>Decided on visuals and types of components that needed to be developed. </li>
 <li>Designed banner with a simple text & image. </li>
 <li>Wrapped the whole app into a theme (with Theme Context and Theme Wrapper). </li>
-<li>Wraped the app in the Theme Wrapper in main.jsx. </li>
-<li>Started working on a navbar. Navbar is meant to contain Toggle (ToggleDark component) to switch between light and dark theme. </li>
+<li>Wrapped the app in the Theme Wrapper in main.jsx. </li>
+<li>Started working on a navbar. Navbar is meant to contain Toggle (toggleDark component) to switch between light and dark theme. </li>
 <li>Main functionality work: worked on Table & Coins component to fetch and render API data (with Axios).</li>
 <li>Developed Search field and Clear search functionality to ensure user could focus on individual crypto coin(s) only. </li>
 <li>Pagination component was the last part of development process, after the rest of functionality was ensured to be in place. Pagination is meant to limit number of crypto data rows in a table (from 100 to 10 per page) to complement search functionality and make user experience more friendly.</li>
@@ -33,9 +33,9 @@ User is able to:
 <li>Web App Responsiveness (different screen fit) comes from CSS @media queries.</li>
 </ol>
 
-## 💻 Dependecies (libraries)
+## 💻 Dependencies (libraries)
 
-Crypto Navigator Web App was built using React framework with ulilisatiion of folowing dependecies (libraries):
+Crypto Navigator Web App was built using React framework with utilisation of following dependencies (libraries):
 
 - [Bootstrap](https://www.npmjs.com/package/bootstrap)
 
@@ -43,7 +43,7 @@ Crypto Navigator Web App was built using React framework with ulilisatiion of fo
 npm i bootstrap
 ```
 
-- [React Bootstap](https://www.npmjs.com/package/react-bootstrap)
+- [React Bootstrap](https://www.npmjs.com/package/react-bootstrap)
 
 ```
 npm i react-bootstrap
