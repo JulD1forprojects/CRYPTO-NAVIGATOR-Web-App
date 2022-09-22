@@ -62,7 +62,7 @@ const App = () => {
   console.log(indexOfFirstPost);
 
   // the below code is for getting the data based on the indexes
-  //and the amount of record we set to show per page. i.e 100
+  //and the amount of record we set to show per page. i.e 10
   const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
   console.log(currentPosts);
 
