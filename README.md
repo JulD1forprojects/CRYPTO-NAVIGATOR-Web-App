@@ -2,7 +2,7 @@
 
 ## 📊 About this Web App
 
-Crypto Navigator is a practical Web App that was developed with the purpose to help crypto enthusiasts find the best Crypto rates around the globe and are rapidly fetched with one of the most reliable Crypto APIs on the market - Coin Gecko /coins/markets. The app fetches data for 100 crypto coins based on any selected fiat currency.
+Crypto Navigator is a practical Web App that was developed with the purpose to help crypto enthusiasts find the best Crypto rates around the globe that are rapidly fetched with one of the most reliable Crypto APIs on the market - Coin Gecko /coins/markets. The Web App fetches data for 100 crypto coins based on any selected fiat currency.
 
 ## 🧐 How to use this Web App
 
