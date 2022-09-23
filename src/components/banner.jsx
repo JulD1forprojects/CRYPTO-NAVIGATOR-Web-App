@@ -14,7 +14,7 @@ const Banner = ({
   //settig default value for search input field
   const [value, setValue] = useState("");
 
-  // gets called when search button is pressed
+  //! gets called when search button is pressed
   const search = () => {
     //console.log(currency);
     axios
