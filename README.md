@@ -18,7 +18,7 @@ User is able to:
 
 ![Imgur](https://i.imgur.com/vwVc1z9.png)
 
-## 👨🏽‍💻 Project Development Methodology
+## 👨🏽‍💻 Project Development Approach
 
 <ol>
 <li>Decided on visuals and types of components that needed to be developed. </li>
